@@ -15,15 +15,24 @@
 
     <main class="principal">
         <section class="principal__entrada">
-            <textarea name="texto-entrada" id="texto-entrada" cols="30" rows="10" placeholder="Digite seu texto..."></textarea>
-            <div class="principal__entrada__acoes">
-                <button class="principal__entrada__acoes_botao">Criptografar</button>
-                <button class="principal__entrada__acoes_botao">Descriptografar</button>
+            <div class="principal__entrada__box">
+                <textarea name="texto-entrada" class="principal__textarea" id="texto-entrada" placeholder="Digite seu texto..."></textarea>
+                <div class="principal__entrada__acoes">
+                    <button class="principal__entrada__acoes__botao dark" id="botao-criptografar">Criptografar</button>
+                    <button class="principal__entrada__acoes__botao" id="botao-descriptografar">Descriptografar</button>
+                </div>
             </div>
+            <p class="principal__entrada__aviso">    
+                <svg class="principal__entrada__aviso__icone" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm11-4a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V8Zm-1 7a1 1 0 1 0 0 2 1 1 0 1 0 0-2Z" clip-rule="evenodd"/>
+                </svg> 
+                Apenas letras minúsculas e sem acento.
+            </p>
         </section>
         <section class="principal__saida">
-            <textarea name="texto-saida" id="texto-saida" cols="30" rows="10" readonly></textarea>
+            <textarea name="texto-saida" class="principal__textarea" id="texto-saida" readonly placeholder="Nenhuma mensagem encontrada"></textarea>
         </section>
+
     </main>
 
     <footer class="rodape">
