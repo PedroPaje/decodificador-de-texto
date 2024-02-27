@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
+    font-size: 1em;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -13,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 1em;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cabecalho__titulo {
@@ -22,9 +23,22 @@ body {
     font-weight: 600;
 }
 
-.principal {
-    padding: 3em 15%;
+main {
+    padding: 2em 15%;
     min-height: calc(100vh - 13em);
+}
+
+.erro {
+    width: 100%;
+    height: 2em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.principal {
     display: flex;
     align-items: flex-start;
     gap: 1em;
@@ -42,6 +56,7 @@ body {
 }
 
 .principal__textarea {
+    height: 10em;
     width: calc(100% - 2em);
     resize: none;
     outline: none;
@@ -50,7 +65,6 @@ body {
 }
 
 #texto-entrada {
-    height: 10em;
     border-radius: 10px 10px 0 0;
 }
 
@@ -58,33 +72,29 @@ body {
     display: flex;
 }
 
-.principal__entrada__acoes__botao {
-    width: 50%;
+.principal__acoes__botao {
     padding: 0.5em;
     font-size: 1.2em;
     background-color: #f6f8fa;
 }
 
-/* .principal__entrada__acoes__botao.dark {
-    background-color: black;
-    color: white;
-} */
-
-.principal__entrada__acoes__botao:hover {
+.principal__acoes__botao:not([disabled]):hover {
     background-color: #f3f4f6;
 }
 
-.principal__entrada__acoes__botao:active {
+.principal__acoes__botao:not([disabled]):active {
     background-color: #ebecf0;
 }
 
 #botao-criptografar {
+    width: 50%;
     border-top: 2px solid rgba(0, 0, 0, 0.12);
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 0 0 0 10px;
 }
 
 #botao-descriptografar {
+    width: 50%;
     border-top: 2px solid rgba(0, 0, 0, 0.12);
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 0 0 10px 0;
@@ -107,14 +117,35 @@ body {
 }
 
 #texto-saida {
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     background-color: #f5f5f5;
+    box-shadow: 0 3px #f5f5f5;
+}
+
+#botao-copiar {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0 0 10px 10px;
 }
 
 .rodape {
-    height: 3em;
+    height: 5em;
     background-color: #f6f8fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.social {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5em;
+}
+
+.social__icon {
+    height: 1.5em;
 }
