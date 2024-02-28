@@ -22,8 +22,18 @@
                 <div class="principal__entrada__box">
                     <textarea name="texto-entrada" class="principal__textarea" id="texto-entrada" placeholder="Digite seu texto..." autofocus></textarea>
                     <div class="principal__entrada__acoes">
-                        <button class="principal__acoes__botao" id="botao-criptografar">Criptografar</button>
-                        <button class="principal__acoes__botao" id="botao-descriptografar">Descriptografar</button>
+                        <button class="principal__acoes__botao" id="botao-criptografar" onclick="acaoCriptografar()">
+                            <svg class="principal__acoes__botao_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H7a1 1 0 0 1-1-1v-7c0-.6.4-1 1-1Z"/>
+                            </svg>
+                            Criptografar
+                        </button>
+                        <button class="principal__acoes__botao" id="botao-descriptografar" onclick="acaoDescriptografar()">
+                            <svg class="principal__acoes__botao_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14v3m4-6V7a3 3 0 1 1 6 0v4M5 11h10c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1H5a1 1 0 0 1-1-1v-7c0-.6.4-1 1-1Z"/>
+                            </svg>                        
+                            Descriptografar
+                        </button>
                     </div>
                 </div>
                 <p class="principal__entrada__aviso">    
@@ -36,7 +46,12 @@
             <section class="principal__saida">
                 <textarea name="texto-saida" class="principal__textarea" id="texto-saida" readonly placeholder="Nenhuma mensagem encontrada"></textarea>
                 <div class="principal__saida__acoes">
-                    <button class="principal__acoes__botao" id="botao-copiar" disabled>Copiar</button>
+                    <button class="principal__acoes__botao" id="botao-copiar" onclick="acaoCopiar()" disabled>
+                        <svg class="principal__acoes__botao_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3c0 .6-.4 1-1 1H5m11 4h2c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1h-7a1 1 0 0 0-1 1v1m4 3v10c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1v-7.1c0-.3 0-.5.2-.7l2.5-2.9c.2-.2.5-.3.8-.3H13c.6 0 1 .4 1 1Z"/>
+                        </svg>
+                        Copiar
+                    </button>
                 </div>
             </section>
         </section>
@@ -56,5 +71,7 @@
             </svg>
         </div>
     </footer>
+
+    <script src="app.js" defer></script>
 </body>
 </html>

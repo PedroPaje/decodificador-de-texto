@@ -76,6 +76,9 @@ main {
     padding: 0.5em;
     font-size: 1.2em;
     background-color: #f6f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .principal__acoes__botao:not([disabled]):hover {
@@ -84,6 +87,10 @@ main {
 
 .principal__acoes__botao:not([disabled]):active {
     background-color: #ebecf0;
+}
+
+.principal__acoes__botao_icon {
+    height: 1.2em;
 }
 
 #botao-criptografar {
