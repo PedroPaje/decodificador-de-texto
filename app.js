@@ -17,7 +17,10 @@ function acaoDescriptografar() {
 }
 
 function acaoCopiar() {
-
+    textoSaida.select();
+    textoSaida.setSelectionRange(0, 99999);
+    let textoCopiar = textoSaida.value;
+    navigator.clipboard.writeText(textoCopiar);
 }
 
 function criptografar(entrada) {
