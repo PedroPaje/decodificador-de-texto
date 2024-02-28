@@ -6,7 +6,7 @@ const botaoCopiar = document.getElementById("botao-copiar");
 const criptografia = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u","ufat"]];
 
 function acaoCriptografar() {
-    var regExp = /[a-z]/g;
+    var regExp = /^[a-z]*$/g;
     if (textoEntrada.value == "") {
         mensagemErro.innerText = "! Insira uma mensagem para ser criptografada";
         return;
@@ -22,7 +22,7 @@ function acaoCriptografar() {
 }
 
 function acaoDescriptografar() {
-    var regExp = /[a-z]/g;
+    var regExp = /^[a-z]*$/g;
     if (textoEntrada.value == "") {
         mensagemErro.innerText = "! Insira uma mensagem para ser descriptografada";
         return;
