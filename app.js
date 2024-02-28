@@ -11,7 +11,9 @@ function acaoCriptografar() {
 }
 
 function acaoDescriptografar() {
-
+    let mensagemDescriptografada = descriptografar(textoEntrada.value);
+    textoSaida.value = mensagemDescriptografada;
+    botaoCopiar.disabled = textoSaida.value == "";
 }
 
 function acaoCopiar() {
@@ -22,6 +24,14 @@ function criptografar(entrada) {
     let saida = entrada;
     criptografia.forEach(elemento => {
         saida = saida.replaceAll(elemento[0], elemento[1]);
+    });
+    return saida;
+}
+
+function descriptografar(entrada) {
+    let saida = entrada;
+    criptografia.forEach(elemento => {
+        saida = saida.replaceAll(elemento[1], elemento[0]);
     });
     return saida;
 }
