@@ -153,6 +153,19 @@ main {
     gap: 0.5em;
 }
 
+.social__ancora {
+    height: 1.5em;
+}
+
 .social__icon {
     height: 1.5em;
+    color: #1F2328;
+}
+
+.social__icon:hover {
+    color: #6F7378;
+}
+
+.social__icon:active {
+    color: #8F9398;
 }
