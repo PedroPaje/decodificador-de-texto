@@ -21,7 +21,7 @@ if (tema == "dark") {
 
 // Funcoes
 function acaoCriptografar() {
-    var regExp = /^[a-z]*$/g;
+    var regExp = /^[a-z ]*$/g;
     if (textoEntrada.value == "") {
         mensagemErro.innerText = "! Insira uma mensagem para ser criptografada";
         return;
@@ -37,7 +37,7 @@ function acaoCriptografar() {
 }
 
 function acaoDescriptografar() {
-    var regExp = /^[a-z]*$/g;
+    var regExp = /^[a-z ]*$/g;
     if (textoEntrada.value == "") {
         mensagemErro.innerText = "! Insira uma mensagem para ser descriptografada";
         return;
