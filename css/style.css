@@ -1,25 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
+    --cor-background: #ffffff;
+    --cor-cabecalho: #f6f8fa;
+    --cor-saida: #f5f5f5;
+    --cor-texto: #1F2328;
+    --cor-texto-hover: #6F7378;
+    --cor-texto-active: #8F9398;
+    --cor-botao: #f6f8fa;
+    --cor-botao-hover: #f3f4f6;
+    --cor-botao-active: #ebecf0;
+    --cor-shadow: rgba(0, 0, 0, 0.2);
+    --cor-border: rgba(0, 0, 0, 0.12);
+    --cor-erro: #ff0000;
+
+    --fonte-titulo: "Kode Mono", monospace;
+    --fonte-texto: "Roboto", sans-serif;
+
+    background-color: var(--cor-background);
     font-size: 1em;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--fonte-texto);
     font-weight: 400;
     font-style: normal;
-    color: #1F2328;
+    color: var(--cor-texto);
 }
 
 .cabecalho {
     height: 4em;
-    background-color: #f6f8fa;
+    background-color: var(--cor-cabecalho);
     display: flex;
     align-items: center;
     padding: 0 1em;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px var(--cor-shadow);
 }
 
 .cabecalho__titulo {
     font-size: 2em;
-    font-family: "Kode Mono", monospace;
+    font-family: var(--fonte-titulo);
     font-weight: 600;
 }
 
@@ -35,7 +52,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: red;
+    color: var(--cor-erro);
 }
 
 .principal {
@@ -51,7 +68,7 @@ main {
 }
 
 .principal__entrada__box {
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--cor-border);
     border-radius: 10px;
 }
 
@@ -75,18 +92,18 @@ main {
 .principal__acoes__botao {
     padding: 0.5em;
     font-size: 1.2em;
-    background-color: #f6f8fa;
+    background-color: var(--cor-botao);
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
 .principal__acoes__botao:not([disabled]):hover {
-    background-color: #f3f4f6;
+    background-color: var(--cor-botao-hover);
 }
 
 .principal__acoes__botao:not([disabled]):active {
-    background-color: #ebecf0;
+    background-color: var(--cor-botao-active);
 }
 
 .principal__acoes__botao_icon {
@@ -95,15 +112,15 @@ main {
 
 #botao-criptografar {
     width: 50%;
-    border-top: 2px solid rgba(0, 0, 0, 0.12);
-    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 2px solid var(--cor-border);
+    border-right: 1px solid var(--cor-border);
     border-radius: 0 0 0 10px;
 }
 
 #botao-descriptografar {
     width: 50%;
-    border-top: 2px solid rgba(0, 0, 0, 0.12);
-    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 2px solid var(--cor-border);
+    border-left: 1px solid var(--cor-border);
     border-radius: 0 0 10px 0;
 }
 
@@ -125,20 +142,20 @@ main {
 
 #texto-saida {
     border-radius: 10px 10px 0 0;
-    background-color: #f5f5f5;
-    box-shadow: 0 3px #f5f5f5;
+    background-color: var(--cor-saida);
+    box-shadow: 0 3px var(--cor-saida);
 }
 
 #botao-copiar {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-top: 2px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--cor-border);
+    border-top: 2px solid var(--cor-border);
     border-radius: 0 0 10px 10px;
 }
 
 .rodape {
     height: 5em;
-    background-color: #f6f8fa;
+    background-color: var(--cor-cabecalho);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,13 +176,13 @@ main {
 
 .social__icon {
     height: 1.5em;
-    color: #1F2328;
+    color: var(--cor-texto);
 }
 
 .social__icon:hover {
-    color: #6F7378;
+    color: var(--cor-texto-hover);
 }
 
 .social__icon:active {
-    color: #8F9398;
+    color: var(--cor-texto-active);
 }
