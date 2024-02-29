@@ -1,10 +1,25 @@
+// Constantes
 const mensagemErro = document.getElementById("mensagem-erro");
 const textoEntrada = document.getElementById("texto-entrada");
 const textoSaida = document.getElementById("texto-saida");
 const botaoCopiar = document.getElementById("botao-copiar");
+const checkboxTema = document.getElementById("checkbox-tema");
 
 const criptografia = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u","ufat"]];
 
+// Variaveis
+var tema = window.localStorage.getItem("theme");
+
+// Inicializacao
+if (tema == "dark") {
+    checkboxTema.checked = true;
+    document.body.classList.add("dark");
+} else {
+    checkboxTema.checked = false;
+    document.body.classList.remove("dark");
+}
+
+// Funcoes
 function acaoCriptografar() {
     var regExp = /^[a-z]*$/g;
     if (textoEntrada.value == "") {
@@ -59,3 +74,16 @@ function descriptografar(entrada) {
     });
     return saida;
 }
+
+// Listeners
+checkboxTema.addEventListener('change', (event) => {
+    if (event.currentTarget.checked) {
+        document.body.classList.add("dark");
+        tema = "dark";
+        window.localStorage.setItem("theme", tema);
+    } else {
+        document.body.classList.remove("dark");
+        tema = "light";
+        window.localStorage.setItem("theme", tema);
+    }
+})
