@@ -160,7 +160,7 @@ main {
 }
 
 .principal__textarea {
-    height: 10rem;
+    height: 10em;
     width: calc(100% - 2rem);
     resize: none;
     outline: none;
