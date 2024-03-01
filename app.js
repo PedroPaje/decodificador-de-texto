@@ -4,6 +4,8 @@ const textoEntrada = document.getElementById("texto-entrada");
 const textoSaida = document.getElementById("texto-saida");
 const botaoCopiar = document.getElementById("botao-copiar");
 const checkboxTema = document.getElementById("checkbox-tema");
+const iconLuzLigada = document.getElementById("luz-ligada");
+const iconLuzDesligada = document.getElementById("luz-desligada");
 
 const criptografia = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u","ufat"]];
 
@@ -14,9 +16,13 @@ var tema = window.localStorage.getItem("theme");
 if (tema == "dark") {
     checkboxTema.checked = true;
     document.body.classList.add("dark");
+    iconLuzLigada.classList.remove("show");
+    iconLuzDesligada.classList.add("show");
 } else {
     checkboxTema.checked = false;
     document.body.classList.remove("dark");
+    iconLuzLigada.classList.add("show");
+    iconLuzDesligada.classList.remove("show");
 }
 
 // Funcoes
@@ -79,10 +85,14 @@ function descriptografar(entrada) {
 checkboxTema.addEventListener('change', (event) => {
     if (event.currentTarget.checked) {
         document.body.classList.add("dark");
+        iconLuzLigada.classList.remove("show");
+        iconLuzDesligada.classList.add("show");
         tema = "dark";
         window.localStorage.setItem("theme", tema);
     } else {
         document.body.classList.remove("dark");
+        iconLuzLigada.classList.add("show");
+        iconLuzDesligada.classList.remove("show");
         tema = "light";
         window.localStorage.setItem("theme", tema);
     }
